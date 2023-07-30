@@ -7,5 +7,5 @@
 
 ## Deployment
 
-To view my work please [Click Here](https://sayan-parui-portfolios.netlify.app/](https://64c62d63d37abc6b4113146b--beamish-marshmallow-aed51b.netlify.app/)https://64c62d63d37abc6b4113146b--beamish-marshmallow-aed51b.netlify.app/)
+To view my work please [Click Here](https://64c62d63d37abc6b4113146b--beamish-marshmallow-aed51b.netlify.app/)
 
