@@ -83,3 +83,7 @@ nav div a{
 .offcanvas-body:hover{
   background-color: black;
 }
+
+.carousel-caption h5, p{
+  color: white;
+}

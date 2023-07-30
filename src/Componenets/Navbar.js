@@ -41,8 +41,15 @@ export default function Navbar() {
     }
 
     async function saveAs(){
-        fileHandle = await window.showSaveFilePicker();
-        save();
+        try{
+            fileHandle = await window.showSaveFilePicker();
+            save();
+        }catch(err){
+            if (err.name !== 'AbortError') {
+                console.error(err.name, err.message);
+                return;
+            }
+        }
     }
 
     return (
