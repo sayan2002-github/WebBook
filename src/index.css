@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Handjet:wght@900&family=Orbitron:wght@500&family=Roboto+Slab:wght@700&family=Slabo+27px&display=swap');
+
+
 body {
   margin: 0;
-  background-color: #212529;
+  background-color: #0b1219 !important;
 }
 
 nav div a{
@@ -76,14 +79,154 @@ nav div a{
 }
 
 .about-header{
-  text-shadow: 0 0 10px grey,
-    0 0 60px gray;
+  text-shadow: 0 0 8px grey,
+    0 0 6px gray;
 }
 
-.offcanvas-body:hover{
+.off-button:hover{
   background-color: black;
 }
 
 .carousel-caption h5, p{
   color: white;
+}
+
+
+/* for calclator */
+
+.cal-container{
+  margin: 84px auto;
+  padding: 6px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 45%;
+  border: 4px solid rgb(32 33 36 / 90%);
+  border-radius: 14px;
+  background-color: #0b1219;
+  box-shadow: 0 0 6px grey,
+  0 0 8px gray;
+}
+
+.cal-top{
+  width: 100%;
+  color: white;
+}
+
+.cal-container input{
+  margin: 10px 0px;
+  width: 16rem;
+  height: 5rem;
+  padding: 2px 4px;
+  border: none;
+  font-size: 25px;
+  text-align: right;
+  background-color: #0a1016;
+  color: #16cc86;
+  letter-spacing: 1px;
+  font-weight: 15px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.calc-head{
+  font-family: 'Dancing Script', cursive;
+  color: white;
+}
+
+.calc-head-r:hover{
+  color: white;
+}
+
+.cal-switches{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto Slab', serif;
+}
+
+.cal-row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cal-row .cal-switch{
+  width: 40px;
+  height: 40px;
+  padding: 4px;
+  margin: 6px 6px;
+  border: 2px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  text-align: center;
+  background-color: #e8dfdff5;
+  font-size: 16px;
+}
+
+.cal-row .Ncal-switch{
+  width: 50px;
+  height: 52px;
+  padding: 4px;
+  margin: 10px 8px;
+  border: 2px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  text-align: center;
+  background-color: #e8dfdff5;
+  font-size: 22px;
+}
+
+.cal-row .cal-equi{
+  background-color: orange;
+  border: 2px solid rgb(233, 164, 35);
+}
+
+.cal-swiitch-sp{
+  background-color: #16cc86 !important;
+  border: 2px solid #16cc86 !important;
+}
+
+.cal-row .cal-switch:hover{
+  box-shadow: 0 0 4px white,
+  0 0 2px white;
+  background-color: white;
+}
+
+.cal-row .cal-equi:hover{
+  box-shadow: 0 0 4px white,
+  0 0 2px white;
+  background-color: rgb(233, 164, 35);
+}
+
+.popover{
+  --bs-body-bg: transparent !important;
+  box-shadow: 0 0 8px white,
+  0 0 10px green;
+}
+
+.popover-header {
+  font-family: 'Orbitron', sans-serif;
+  background-color: transparent !important;
+  color: #16cc86 !important;
+}
+.clock-body{
+  width: 28vw;
+}
+
+
+.about-text{
+  color: rgb(152, 149, 149);
+  margin: 30px 0px;
+  font-family: 'Slabo 30px', serif;
+}
+
+.about-head{
+  border-radius: 20px;
+}
+
+.carousel-inner img{
+  height: 70vh;
 }
