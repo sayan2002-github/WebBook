@@ -15,6 +15,10 @@ nav div a{
   background-color: hsl(225, 6%, 25%);
 }
 
+.pen-exc{
+  background-color: whitesmoke;
+}
+
 .pen{
   height: 50vh;
   display: flex;
@@ -78,11 +82,6 @@ nav div a{
   height: 100% !important;
 }
 
-.about-header{
-  text-shadow: 0 0 8px grey,
-    0 0 6px gray;
-}
-
 .off-button:hover{
   background-color: black;
 }
@@ -116,9 +115,9 @@ nav div a{
 }
 
 .cal-container input{
-  margin: 10px 0px;
+  margin: 14px 0px;
   width: 16rem;
-  height: 5rem;
+  height: 6rem;
   padding: 2px 4px;
   border: none;
   font-size: 25px;
@@ -163,7 +162,7 @@ nav div a{
   cursor: pointer;
   text-align: center;
   background-color: #e8dfdff5;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .cal-row .Ncal-switch{
@@ -176,7 +175,7 @@ nav div a{
   cursor: pointer;
   text-align: center;
   background-color: #e8dfdff5;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .cal-row .cal-equi{
@@ -202,23 +201,49 @@ nav div a{
 }
 
 .popover{
-  --bs-body-bg: transparent !important;
-  box-shadow: 0 0 8px white,
-  0 0 10px green;
+  --bs-body-bg: hsl(210deg 10.81% 14.51%) !important;
+  --bs-popover-body-color: white !important;
 }
 
-.popover-header {
+.popover-header{
+  font-family: 'Orbitron', sans-serif;
+  background-color: #363a3d  !important;
+  color: white !important;
+  padding: 16px !important;
+}
+
+.popover-header-clock {
   font-family: 'Orbitron', sans-serif;
   background-color: transparent !important;
   color: #16cc86 !important;
 }
+.popover-body {
+  margin: 5px !important;
+}
+.popover-body .nav-link, button{
+  padding: 10px 4px !important;
+}
+
+.popover-body .nav-link:hover{
+  background-color: black !important;
+}
+
 .clock-body{
   width: 28vw;
 }
 
+.settings-body{
+  width: 28vw;
+}
 
-.about-text{
+.about-text-section{
   color: rgb(152, 149, 149);
+  margin-top: 50px;
+  font-family: 'Slabo 30px', serif;
+}
+
+.about-text-footer{
+  color: white;
   margin: 30px 0px;
   font-family: 'Slabo 30px', serif;
 }
@@ -229,4 +254,23 @@ nav div a{
 
 .carousel-inner img{
   height: 70vh;
+}
+
+
+/*Navbar*/
+.nav-mid{
+  width: 24vw;
+}
+
+.nav-mid a{
+  color: white;
+}
+
+.nav-mid a:hover{
+  border-radius: 10px;
+  background-color: hsl(225, 6%, 25%);
+}
+
+.active-link{
+  color: #0d6efd !important;
 }

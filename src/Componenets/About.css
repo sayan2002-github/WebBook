@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+:root {
+    --main-color: #e02f6b;
+    --blue-dark: #18293c;
+}
+
+.about-header {
+    text-shadow: 0 0 2px greenyellow,
+        0 0 10px rgb(79, 79, 79);
+    margin-top: 20px;
+    height: 10vh;
+}
+
+.about-tab-container {
+    padding-left: 20%;
+}
+
+.about-tabs {
+    margin-top: 10px;
+}
+
+.about-tabs .tab-item {
+    padding: 4px 0 !important;
+    background-color: transparent;
+    border: none;
+    display: inline-block;
+    color: whitesmoke;
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: 500;
+    margin: 0 30px 0 0;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.about-tabs .tab-item:last-child {
+    margin: 0;
+}
+
+.about-tabs .tab-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0%;
+    background-color: whitesmoke;
+    transition: width 0.3s ease;
+}
+
+.about-tabs .tab-item:hover::before {
+    width: 100%;
+}
+
+.timeline {
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    top: 0;
+    left: 5px;
+    background-color: #16cc86;
+}
+
+.tab-content {
+    padding: 10px 0;
+    width: 50%;
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+    padding: 10px 0 0 40px;
+    width: 50vw;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    height: 11px;
+    width: 11px;
+    top: 16px;
+    left: 0;
+    background-color: #16cc86;
+    border-radius: 50%;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item .date {
+    display: block;
+    color: #16cc86;
+    font-weight: 400;
+    margin: 0 0 10px;
+}
+
+.timeline-item h4 {
+    /* font-size: 18px; */
+    margin: 0 0 10px;
+}
+
+.timeline-item h4 span {
+    font-weight: 400;
+}
+
+.timeline-item .container {
+    border: 2px solid #16cc86;
+    padding: 10px 0 0 20px;
+    border-radius: 20px;
+}

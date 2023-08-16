@@ -31,7 +31,7 @@ export default function Editor(props) {
                     <OverlayTrigger delay={{ hide: 450, show: 300 }} overlay={(props) => (
                     <Tooltip {...props}> {eMode === 'material' ? 'Change to light mode!!' : 'Change to dark mode!!'} </Tooltip>
                     )} placement="bottom">
-                        <button type='button' onClick={() => setEMode(eMode === 'material' ? 'light' : 'material')} className='expand-compress-btn' data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tooltip on right">
+                        <button type='button' onClick={() => setEMode(eMode === 'material' ? 'light' : 'material')} className='expand-compress-btn p-2' data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tooltip on right">
                             <FontAwesomeIcon icon={eMode === 'material' ? faSun : faMoon} />
                         </button>
                     </OverlayTrigger>
@@ -39,7 +39,7 @@ export default function Editor(props) {
                     <OverlayTrigger delay={{ hide: 450, show: 300 }} overlay={(props) => (
                     <Tooltip {...props}> {open ? 'Compress' : 'Expand'} </Tooltip>
                     )} placement="bottom">
-                        <button onClick={() => setOpen(prevOpen => !prevOpen)} type='button' className='expand-compress-btn'>
+                        <button onClick={() => setOpen(prevOpen => !prevOpen)} type='button' className='expand-compress-btn p-2'>
                             <FontAwesomeIcon icon={open ? faCompressAlt : faExpandAlt} />
                         </button>
                     </OverlayTrigger>

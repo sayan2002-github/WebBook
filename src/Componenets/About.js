@@ -1,74 +1,54 @@
-import React from 'react'
-import logoA from './logoA.png'
-import logoB from './logoB.png'
-import logoC from './logoC.png'
-import logoD from './logoD.png'
-import logoE from './logoE.png'
+import React, { useEffect } from 'react'
+import './About.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCopyright } from '@fortawesome/free-solid-svg-icons'
 
-export default function About() {
+export default function About({ setProgress }) {
+  useEffect(() => {
+    setProgress(10);
+    setProgress(100);
+  }, [setProgress])
+
   return (
     <>
       <h1 className='container text-center about-header'>Key Features of Our WebBook</h1>
-      <div style={{ backgroundColor: '#293e48' }} className='container p-2 about-head'>
-        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="3000">
-              <img src={logoA} class="d-block w-100" alt="..." />
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Editor Page - HTML, CSS, JS 🔥🔥🔥</h5>
-                <p>You can create your own website in this editor by typing simple HTML, CSS and Javascript ...</p>
+
+      <div className='container about-tab-container'>
+        <div className="about-tabs">
+          <button type="button" className="tab-item" data-target="#">Our Journey</button>
+        </div>
+
+        <div className="tab-content active" id="education">
+          <div className="timeline">
+            <div className="timeline-item">
+              <div className='container'>
+                <span className="date">Version 1.0.0 (Major)</span>
+                <h4> - Added the HTML, CSS, JavaScript Editor</h4>
+                <p>The journey started with version 1.0.0 by adding Web Development editor to edit HTML, CSS and JavaScript.
+                </p>
               </div>
             </div>
-            <div class="carousel-item" data-bs-interval="3000">
-              <img src={logoB} class="d-block w-100" alt="..." />
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Dark Theme / Light Theme 😍</h5>
-                <p>You can seemlessly change your theme for each editor ...</p>
+            <div className="timeline-item">
+              <div className='container'>
+                <span className="date">Version 2.0.0 (Major)</span>
+                <h4> - Added Calculator and Digital Watch</h4>
+                <p>In major update version 2.0.0, I added the Calculator that can seemlessly transform into a Scientific Calculator. And also added a digital watch to provide time while working in your project with just one click !!
+                </p>
               </div>
             </div>
-            <div class="carousel-item" data-bs-interval="3000">
-              <img src={logoC} class="d-block w-100" alt="..." />
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Expand / Collapse 😎</h5>
-                <p>Expand or collpase your each code editor as you want ...</p>
-              </div>
-            </div>
-            <div class="carousel-item" data-bs-interval="3000">
-              <img src={logoD} class="d-block w-100" alt="..." />
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Download / Export ✌️✌️</h5>
-                <p>You can even download this files in a bundle text/html format in your local disk ...</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src={logoE} class="d-block w-100" alt="..." />
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Key Features 😊</h5>
-                <p>The editor even has auto close-tag and auto close-brackets like features ...</p>
+            <div className="timeline-item">
+              <div className='container'>
+                <span className="date">Version 2.0.1 (Minor)</span>
+                <h4> - Added the Top Loading Bar and fixed the navbar</h4>
+                <p>In minor update version 2.0.1, I fixed some bugs in navbar and added the top loading bar to reflect the change of routing !!
+                </p>
               </div>
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
       </div>
 
-      <section className='container d-flex flex-column justify-content-center align-item-center about-text'>
+      <section className='container d-flex flex-column justify-content-center align-item-center about-text-section'>
         <h4>Components :</h4>
         <span>Activtiy 1.0.0 : CodeMirror@5.65.14</span>
         <span>Activtiy 1.0.1 : ReactCodeMirror2@7.2.1</span>
@@ -102,7 +82,7 @@ export default function About() {
           CONTRACT.</span>
       </section>
 
-      <footer className='text-center d-flex flex-column justify-content-center align-item-center about-text'>
+      <footer className='text-center d-flex flex-column justify-content-center align-item-center about-text-footer'>
         <span><FontAwesomeIcon icon={faCopyright} /> Copyright 2023 Shorty. All Rights Reserved Designed by Sayan Parui</span>
       </footer>
     </>

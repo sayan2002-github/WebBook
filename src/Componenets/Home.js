@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import useLocalStorage from '../Hooks/useLocalStorage';
 import Editor from "./Editor";
 
-export default function Home() {
+export default function Home({setProgress}) {
   const [html, setHtml] = useLocalStorage('html', '')
   const [css, setCss] = useLocalStorage('css', '')
   const [js, setJs] = useLocalStorage('js', '')
@@ -21,6 +21,11 @@ export default function Home() {
     return () => clearTimeout(timeout)
   }, [html, css, js])
 
+  useEffect(() => {
+    setProgress(10);
+    setProgress(100);
+  }, [setProgress])
+
   return (
     <div>
         <div className="pen pen-top">
@@ -29,7 +34,7 @@ export default function Home() {
           <Editor language="javascript" displayName="JS" onChange={setJs} value={js} ></Editor>
         </div>
 
-        <div className="pen">   {/* Execution area */}
+        <div className="pen pen-exc">   {/* Execution area */}
           <iframe
             srcDoc={srcDoc}
             title="editor"

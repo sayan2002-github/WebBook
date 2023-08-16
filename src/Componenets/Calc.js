@@ -1,12 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import NormCalc from './NormCalc'
 import SciCalc from './SciCalc'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCompressAlt, faExpandAlt } from '@fortawesome/free-solid-svg-icons'
 import { Routes, Route, Link } from 'react-router-dom';
 
-export default function Calc() {
+export default function Calc({setProgress}) {
   const [path, setPath] = useState("/calc/scicalc");
+  useEffect(() => {
+    setProgress(10);
+    setProgress(100);
+  }, [setProgress])
+  
   return (
     <div className="cal-container">
       <div className='cal-top d-flex justify-content-between align-item-center'>
