@@ -7,6 +7,7 @@ import Calc from './Calc';
 import NormCalc from './NormCalc';
 import SciCalc from './SciCalc';
 import LoadingBar from 'react-top-loading-bar'
+import HomePage from './HomePage';
 
 function App() {
   const [progress, setProgress] = useState(0);
@@ -22,7 +23,8 @@ function App() {
       <Navbar setProgress={setProgress}/>
 
       <Routes>
-        <Route excat path="/" element={<Home setProgress={setProgress}/>} />
+        <Route excat path="/" element={<HomePage setProgress={setProgress}/>} />
+        <Route excat path="/home" element={<Home setProgress={setProgress}/>} />
         <Route excat path="/about" element={<About setProgress={setProgress}/>} />
         <Route excat path="/calc" element={<Calc setProgress={setProgress}/>}>
           <Route path="normcalc" element={<NormCalc />} />
