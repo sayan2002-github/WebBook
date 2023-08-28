@@ -93,7 +93,7 @@ export default function Navbar({ setProgress }) {
                     <Link className="nav-link" to="#" style={{ paddingLeft: '5px' }}><FontAwesomeIcon icon={faGear} />&nbsp; Setting & Appearance &emsp; &emsp; &ensp; <FontAwesomeIcon icon={faGreaterThan} /></Link>
                 </div>
                 <div className="offcanvas-body off-button">
-                    <Link className="nav-link" to="#" style={{ paddingLeft: '5px' }}><FontAwesomeIcon icon={faQuestion} />&nbsp; Help & support&emsp; &emsp; &emsp; &emsp; &emsp; &nbsp; <FontAwesomeIcon icon={faGreaterThan} /></Link>
+                    <Link className="nav-link" to="/contact" style={{ paddingLeft: '5px' }}><FontAwesomeIcon icon={faQuestion} />&nbsp; Help & support&emsp; &emsp; &emsp; &emsp; &emsp; &nbsp; <FontAwesomeIcon icon={faGreaterThan} /></Link>
                 </div>
                 {/* <div className="offcanvas-body off-button">
                     <Link className="nav-link" to="#" style={{ paddingLeft: '5px' }}><FontAwesomeIcon icon={faRightFromBracket} />&nbsp; Logout&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; <FontAwesomeIcon icon={faGreaterThan} /></Link>
@@ -103,7 +103,7 @@ export default function Navbar({ setProgress }) {
     );
 
     return (
-        <nav className="navbar navbar-dark bg-dark">
+        <nav className="navbar navbar-dark" style={{backgroundColor: "#0e0d0dd4"}}>
             <div className="container-fluid">
                 <Link className="navbar-brand d-flex justify-content-center align-item-center" to="/">
                     <img src={logo} alt="Logo" width="30" height="28" className="d-inline-block align-text-top mx-1" />

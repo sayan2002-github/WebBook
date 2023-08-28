@@ -17,12 +17,12 @@ import Clock from './Clock'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPenClip, faCalculator, faComment, faNoteSticky } from '@fortawesome/free-solid-svg-icons';
 
-export default function HomePage({setProgress}) {
+export default function HomePage({ setProgress }) {
     useEffect(() => {
         setProgress(10);
         setProgress(100);
     }, [setProgress])
-    
+
     const apiKey = "71fb475d6a7b3ac081efc39193200a8a";
     const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
     const [weatherIcon, setWeatherIcon] = useState(null);
@@ -30,9 +30,9 @@ export default function HomePage({setProgress}) {
     useEffect(() => {
         const searchBox = document.querySelector(".searchN input");
         const searchBtn = document.querySelector(".searchN button");
-        
+
         setWeatherIcon(document.querySelector(".weather-icon")); // Save the weatherIcon element reference
-        
+
         searchBtn.addEventListener('click', () => {
             const searchBoxVal = searchBox.value;
             checkWeather(searchBoxVal, weatherIcon);
@@ -48,13 +48,13 @@ export default function HomePage({setProgress}) {
     }, [weatherIcon]);
 
     async function checkWeather(cityName, weatherIcon) {
-        try{
+        try {
             const response = await fetch(apiUrl + cityName + `&appid=${apiKey}`);
             var data = await response.json();
             document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
             document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
             document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
-    
+
             if (data.weather[0].main === "Clouds") {
                 setWeatherIcon(cloudLogo);
             } else if (data.weather[0].main === "Clear") {
@@ -66,7 +66,7 @@ export default function HomePage({setProgress}) {
             } else if (data.weather[0].main === "Mist") {
                 setWeatherIcon(mistLogo);
             }
-        }catch(err){
+        } catch (err) {
             document.querySelector(".temp").innerHTML = "Undefined";
             document.querySelector(".humidity").innerHTML = "0%";
             document.querySelector(".wind").innerHTML = "0.0 km/h";
@@ -89,7 +89,7 @@ export default function HomePage({setProgress}) {
     }
 
     const Months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    const Days = ["Sunday", "Monday", "Tuesday", "Wednesday","Thursday", "Friday", "Saturday"];
+    const Days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     let d = new Date();
     let day = d.getDay();
     let date = d.getDate() + " " + Months[d.getMonth()] + ", " + d.getFullYear();

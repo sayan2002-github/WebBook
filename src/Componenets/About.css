@@ -119,7 +119,7 @@
     border-radius: 20px;
 }
 
-.accordion-button{
+.accordion-button {
     background-color: black !important;
     color: white !important;
     padding: 20px !important;
@@ -127,15 +127,31 @@
     font-weight: bold;
 }
 
-.accordion{
+.accordion {
     margin-top: 4rem;
 }
 
-.accordion-body{
+.accordion-body {
     background-color: black;
 }
 
-footer{
+footer {
     border-top: 2px solid white;
     padding: 20px 10px 0px 0px;
+}
+
+.about-text-section {
+    color: rgb(152, 149, 149);
+    margin-top: 50px;
+    font-family: 'Slabo 30px', serif;
+}
+
+.about-text-footer {
+    color: white;
+    margin: 30px auto;
+    font-family: 'Slabo 30px', serif;
+}
+
+.about-head {
+    border-radius: 20px;
 }

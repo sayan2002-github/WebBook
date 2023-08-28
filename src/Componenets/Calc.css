@@ -1,0 +1,180 @@
+.calc-page{
+    width: 100%;
+    height: 100%;
+}
+
+.calc-page .calc-circle{
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(to right, white, #a160fb);
+    border-radius: 50%;
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    top: 8%;
+    z-index: -10;
+}
+
+.calc-page .calc-square{
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(to top, green, white);
+    border-radius: 20px;
+    margin: auto;
+    position: absolute;
+    left: 36%;
+    bottom: 4%;
+    z-index: -10;
+    font-size: 5em;
+}
+
+.calc-page .calc-symbols-pos1{
+    font-size: 8em;
+    color: #16cc86;
+    position: absolute;
+    top: 32%;
+    left: 34%;
+    z-index: -2;
+}
+
+.calc-page .calc-symbols-pos2{
+    font-size: 8em;
+    color: plum;
+    position: absolute;
+    top: 37%;
+    left: 78%;
+}
+
+.calc-page .calc-symbols-pos3{
+    font-size: 8em;
+    color: royalblue;
+    position: absolute;
+    bottom: 7%;
+    left: 4%;
+}
+
+.calc-page .calc-symbols-pos4{
+    font-size: 8em;
+    color: rgb(161, 99, 109);
+    position: absolute;
+    top: 10%;
+    left: 17%;
+}
+
+.calc-page .calc-symbols-pos5{
+    font-size: 8em;
+    color: orange;
+    position: absolute;
+    bottom: 13%;
+    right: 30%;
+}
+
+.cal-container {
+    margin: 50px auto;
+    padding: 6px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 22vw;
+    height: 78vh;
+    border: 4px solid rgb(32 33 36 / 90%);
+    border-radius: 14px;
+    background-color: #0b1219;
+}
+
+.cal-top {
+    width: 100%;
+    color: white;
+}
+
+.cal-container input {
+    margin: 14px 0px;
+    width: 18rem;
+    height: 7rem;
+    padding: 2px 4px;
+    border: none;
+    font-size: 25px;
+    text-align: right;
+    background-color: #0a1016;
+    color: #16cc86;
+    letter-spacing: 1px;
+    font-weight: 15px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.calc-head {
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    padding: 10px 10px 0px 10px;
+}
+
+.calc-head-r:hover {
+    color: white;
+}
+
+.cal-switches {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto Slab', serif;
+}
+
+.cal-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cal-row .cal-switch {
+    width: 44px;
+    height: 44px;
+    padding: 4px;
+    margin: 7px 7px;
+    border: 1px solid #1a1a1a;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #1a1a1a;
+    color: white;
+    font-size: 14px;
+}
+
+.cal-row .Ncal-switch {
+    width: 50px;
+    height: 52px;
+    padding: 4px;
+    margin: 12px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #1a1a1a;
+    border: 1px solid #1a1a1a;
+    color: white;
+    font-size: 20px;
+}
+
+.cal-row .cal-equi {
+    background-color: #a160fb;
+}
+
+.cal-swiitch-sp {
+    background-color: #a160fb !important;
+}
+
+.cal-row .cal-switch:hover {
+    background-color: #0a1016;
+}
+
+.cal-row .Ncal-switch:hover {
+    background-color: #0a1016;
+}
+
+.cal-row .cal-equi:hover {
+    background-color: purple;
+}
+
+.cal-row .cal-swiitch-sp:hover {
+    background-color: purple !important;
+}

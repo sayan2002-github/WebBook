@@ -53,6 +53,14 @@ export default function About({ setProgress }) {
                 </p>
               </div>
             </div>
+            <div className="timeline-item">
+              <div className='container'>
+                <p className="date">Version 2.2.0 (Feature)</p>
+                <h4> - Added the Contact Page</h4>
+                <p>In a feature updation version 2.2.0, added this beautiful contact page with feedback form and all the related links for follow !!
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
