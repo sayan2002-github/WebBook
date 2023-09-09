@@ -12,7 +12,7 @@ import editorLogo from './images/editor-logo.png'
 import noteLogo from './images/note-logo.png'
 import viberLogo from './images/viber-logo.png'
 import { Link } from 'react-router-dom';
-import './HomePage.css'
+import './css/HomePage.css'
 import Clock from './Clock'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPenClip, faCalculator, faComment, faNoteSticky } from '@fortawesome/free-solid-svg-icons';
@@ -170,7 +170,7 @@ export default function HomePage({ setProgress }) {
                             <div className="card-body card-bodyE">
                                 <h3 className="card-title card-titleE">Keep Notes'</h3>
                                 <p className="card-text card-textE">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias consequuntur pariatur dolorem temporibus libero. Dignissimos impedit quisquam quis molestias laborum. </p>
-                                <Link to="#" className="btn btn-light">ToDo</Link>
+                                <Link to="/keepnote" className="btn btn-light">Open App</Link>
                             </div>
                         </div>
                     </div>

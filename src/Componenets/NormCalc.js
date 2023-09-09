@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+// eslint-disable-next-line
 export default function () {
     const [result, setResult] = useState("");
 
@@ -17,6 +18,7 @@ export default function () {
 
     const calcualte = () =>{
         try {
+            // eslint-disable-next-line
             setResult((eval(result)).toString());
         } catch (error) {
             setResult("Error");

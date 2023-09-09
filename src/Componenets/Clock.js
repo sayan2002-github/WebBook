@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Clock.css';
+import './css/Clock.css';
 
 export default function Clock() {
     const [secondRotation, setSecondRotation] = useState(0);

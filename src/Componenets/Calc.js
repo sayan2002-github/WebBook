@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import './Calc.css'
+import './css/Calc.css'
 import NormCalc from './NormCalc'
 import SciCalc from './SciCalc'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

@@ -1,0 +1,17 @@
+.note-body{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.keep-note-btn:hover{
+    cursor: pointer;
+}
+
+.keep-note-tag{
+    border-radius: 0 20px 0 5px;
+}
+
+.modal-body, .modal-header, .modal-footer{
+    background-color: black;
+}

@@ -5,10 +5,10 @@ import { faGear, faDownload, faCircleInfo, faHouse, faGreaterThan, faCalculator,
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import 'bootstrap/dist/css/bootstrap.css';
 import { Link } from 'react-router-dom';
-import logo from './logo.png'
+import logo from './images/logo.png'
 import Button from 'react-bootstrap/Button';
 import Popover from 'react-bootstrap/Popover'
-import "./SmartWatch.css"
+import "./css/SmartWatch.css"
 
 export default function Navbar({ setProgress }) {
     const [html] = useLocalStorage('html', '')
@@ -67,7 +67,7 @@ export default function Navbar({ setProgress }) {
                     <Link className="nav-link" to="/calc" style={{ paddingLeft: '5px' }}><FontAwesomeIcon icon={faCalculator} />&nbsp; Calculator &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; <FontAwesomeIcon icon={faGreaterThan} /></Link>
                 </div>
                 <div className="offcanvas-body off-button">
-                    <Link className="nav-link" to="#" style={{ paddingLeft: '5px' }}><FontAwesomeIcon icon={faComment} /> &nbsp; Keep Note's &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<FontAwesomeIcon icon={faGreaterThan} /></Link>
+                    <Link className="nav-link" to="/keepnote" style={{ paddingLeft: '5px' }}><FontAwesomeIcon icon={faComment} /> &nbsp; Keep Note's &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<FontAwesomeIcon icon={faGreaterThan} /></Link>
                 </div>
                 <div className="offcanvas-body off-button">
                     <Link className="nav-link" to="#" style={{ paddingLeft: '5px' }}><FontAwesomeIcon icon={faNoteSticky} />&nbsp; Chat Application&emsp; &emsp; &emsp; &emsp; &emsp;<FontAwesomeIcon icon={faGreaterThan} /></Link>

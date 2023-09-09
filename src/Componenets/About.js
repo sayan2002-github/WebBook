@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import './About.css'
+import './css/About.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCopyright, faSitemap, faIdBadge } from '@fortawesome/free-solid-svg-icons'
 import aboutGif from './images/about-gif.gif'

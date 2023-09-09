@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 
+// eslint-disable-next-line
 export default function () {
     const [display, setDisplay] = useState("");
     const [result, setResult] = useState("");
@@ -59,16 +60,22 @@ export default function () {
                 var l = result.substring(powIndex+1, result.length);
 
                 var str =  `Math.pow(${f}, ${l})`;
+                // eslint-disable-next-line
                 setDisplay((eval(str)).toString());
+                // eslint-disable-next-line
                 setResult(eval(str).toString())
             }else if(sqrIndex !== -1){
                 l = result.substring(1, result.length);
 
                 str =  `Math.sqrt(${l})`;
+                // eslint-disable-next-line
                 setDisplay((eval(str)).toString());
+                // eslint-disable-next-line
                 setResult(eval(str).toString())
             }else{
+                // eslint-disable-next-line
                 setDisplay((eval(result)).toString());
+                // eslint-disable-next-line
                 setResult(eval(result).toString());
             }
         } catch (error) {

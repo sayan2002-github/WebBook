@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './Contact.css'
+import './css/Contact.css'
 import photoImg from './images/photo.jpg'
 import photImg1 from './images/photo-1.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
