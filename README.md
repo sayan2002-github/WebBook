@@ -1,6 +1,7 @@
-# WebBook - An online Web Application for code editing, weather checking and other integrated features   [ Working on backend ]
+# WebBook - An online Web Application for code editing, weather checking and other integrated features
 #####  A React Js web application with multiple integrated feature/applications
 ##### Created using React Js 🔥🔥🔥
+##### Currently working on backend to provide login and signup features
 
 ## Introduction
 1. It is an individual project created using React Js. There are three different editors for HTML, CSS and JavaScript. One can expand/collapse every
