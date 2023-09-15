@@ -2,7 +2,7 @@
 #####  A React Js web application with multiple integrated feature/applications 🔥🔥🔥🔥
 
 ## Introduction
-1. It is an individual project created using React Js. There are three different editors for HTML, CSS and JavaScript. It also Comes up with an integrated calculator application to calculate accounts, that dynamically can also be changed from normal calculator
+It is an individual project created using React Js. There are three different editors for HTML, CSS and JavaScript. It also Comes up with an integrated calculator application to calculate accounts, that dynamically can also be changed from normal calculator
 to scientific calculator and vice‑versa. In the home page a weather app is present where one can simply search cities to check weather, wind speed etc. And also a beautiful
 clock is present to provide the valuable time that runs all (24x7) hour.
 
