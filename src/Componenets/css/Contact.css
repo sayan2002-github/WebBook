@@ -8,7 +8,7 @@
     width: 40vw;
 }
 
-.about-head-text h2{
+.about-head-text-headers{
     max-width: 30vw !important;
     display: block;
     margin: auto;
@@ -74,7 +74,7 @@ footer{
 footer .leaf-footer{
     position: absolute;
     left: 240px;
-    bottom: 60px;
+    bottom: 82px;
     font-size: 3em !important;
     color: #16cc86;
     z-index: -1;
@@ -135,59 +135,6 @@ footer div{
     background: #16cc86;
 }
 
-
-
-.contact-info{
-    width: 36vw;
-    height: 70vh;
-    padding: 40px 0;
-    background: linear-gradient(135deg, rgba(5, 117, 5, 0.69), rgb(145, 145, 145));
-    position: absolute;
-    top: 16%;
-    left: 32%;
-    z-index: 100;
-    color: white !important;
-    border-radius: 20px;
-    display: none;
-}
-
-.contact-info-cross{
-    position: absolute;
-    left: 496px;
-    top: 2px;
-    font-size: 2em !important;
-    color: white;
-    --bs-btn-line-height: 10px !important;
-    border-radius: 50%;
-    width: 54px;
-}
-
-.contact-info-cross:hover{
-    cursor: pointer;
-    color: rgb(155, 249, 139);
-}
-
-.contact-info h2{
-    margin: 0px 0px 34px 50px;
-}
-
-.contact-info .row input, textarea{
-    margin: 8px auto;
-    padding: 8px;
-    width: 30vw;
-    border-radius: 10px;
-    border: none;
-}
-
-.contact-info textarea{
-    height: 14vh;
-}
-
-.contact-info .row .submit-btn{
-    margin: 25px 0px;
-}
-
-.contact-info .row button{
-    display: block;
-    margin: auto;
+.contact-modal-body, .contact-modal-header, .contact-modal-footer{
+    background: linear-gradient(135deg, rgba(5, 117, 5, 0.69), rgb(145, 145, 145)) !important;
 }

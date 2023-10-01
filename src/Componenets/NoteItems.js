@@ -15,8 +15,8 @@ export default function NoteItems(props) {
                     <h5 className="card-title">{note.title}</h5>
                     <p className="card-text">{note.description}</p>
                     <div className='d-flex'>
-                        <FontAwesomeIcon icon={faPenToSquare} className='keep-note-btn me-2' onClick={(e)=>{e.preventDefault(); updateNote(note)}}/>
-                        <FontAwesomeIcon icon={faTrash} className='keep-note-btn ms-2' onClick={(e)=>{e.preventDefault(); deleteNote(note._id)}}/>
+                        <FontAwesomeIcon icon={faPenToSquare} className='keep-note-btn upbtn me-2' onClick={(e)=>{e.preventDefault(); updateNote(note)}}/>
+                        <FontAwesomeIcon icon={faTrash} className='keep-note-btn delbtn ms-2' onClick={(e)=>{e.preventDefault(); deleteNote(note._id); props.showAlert('Note Deleted Successfully!!', 'warning')}}/>
                     </div>
                 </div>
 

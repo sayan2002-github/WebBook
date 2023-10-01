@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import './css/About.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCopyright, faSitemap, faIdBadge } from '@fortawesome/free-solid-svg-icons'
-import aboutGif from './images/about-gif.gif'
 
 export default function About({ setProgress }) {
   useEffect(() => {
@@ -12,7 +11,7 @@ export default function About({ setProgress }) {
 
   return (
     <>
-      <img className='container text-center about-header' src={aboutGif} alt='...'></img>
+      <h1 className='about-header text-center'>About WebBook</h1>
 
       <div className='container about-tab-container'>
         <div className="about-tabs">
@@ -22,42 +21,44 @@ export default function About({ setProgress }) {
         <div className="tab-content active" id="education">
           <div className="timeline">
             <div className="timeline-item">
-              <div className='container'>
+              <div className='container timeline-container'>
                 <p className="date">Version 1.0.0 (Major)</p>
-                <h4> - Added the HTML, CSS, JavaScript Editor</h4>
                 <p>The journey started with version 1.0.0 by adding Web Development editor to edit HTML, CSS and JavaScript.
                 </p>
               </div>
             </div>
             <div className="timeline-item">
-              <div className='container'>
+              <div className='container timeline-container'>
                 <p className="date">Version 2.0.0 (Major)</p>
-                <h4> - Added Calculator and Digital Watch</h4>
                 <p>In major update version 2.0.0, I added the Calculator that can seemlessly transform into a Scientific Calculator. And also added a digital watch to provide time while working in your project with just one click !!
                 </p>
               </div>
             </div>
             <div className="timeline-item">
-              <div className='container'>
+              <div className='container timeline-container'>
                 <p className="date">Version 2.0.1 (Minor)</p>
-                <h4> - Added the Top Loading Bar and fixed the navbar</h4>
                 <p>In minor update version 2.0.1, I fixed some bugs in navbar and added the top loading bar to reflect the change of routing !!
                 </p>
               </div>
             </div>
             <div className="timeline-item">
-              <div className='container'>
+              <div className='container timeline-container'>
                 <p className="date">Version 2.1.0 (Feature)</p>
-                <h4> - Added the Home Page</h4>
                 <p>In a feature updation version 2.1.0, added this beautiful homepage with the weather component secion and clock section !!
                 </p>
               </div>
             </div>
             <div className="timeline-item">
-              <div className='container'>
+              <div className='container timeline-container'>
                 <p className="date">Version 2.2.0 (Feature)</p>
-                <h4> - Added the Contact Page</h4>
                 <p>In a feature updation version 2.2.0, added this beautiful contact page with feedback form and all the related links for follow !!
+                </p>
+              </div>
+            </div>
+            <div className="timeline-item">
+              <div className='container timeline-container'>
+                <p className="date">Version 3.1.0 (Major)</p>
+                <p>In major update version 2.0.0, I added the backend with the keep notes' application where you can easily keep your daily doing or trackss or notes !!
                 </p>
               </div>
             </div>
@@ -65,7 +66,7 @@ export default function About({ setProgress }) {
         </div>
       </div>
 
-      <div class="accordion container" id="accordionPanelsStayOpenExample">
+      <div class="accordion container accordion-container" id="accordionPanelsStayOpenExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="panelsStayOpen-headingOne">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">

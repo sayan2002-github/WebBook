@@ -9,11 +9,3 @@
     align-items: center;
     min-height: 100%;
 }
-
-h1{
-    max-width: 16vw;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 3em;
-    font-weight: 500;
-    color: #16cc86;
-}

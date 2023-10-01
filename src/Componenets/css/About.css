@@ -7,11 +7,17 @@
 
 .about-header {
     display: block;
-    box-shadow: 0 0 2px rgb(79, 79, 79),
-        0 0 10px rgb(79, 79, 79);
+    box-shadow: 0 0 2px rgb(2, 109, 31),
+        0 0 10px rgb(7, 125, 38);
     margin: 40px auto;
+    padding-top: 10px;
     height: 10vh;
+    width: 56vw;
     border-radius: 40px;
+    color: white;
+    text-shadow: 0 0 3px rgb(81, 217, 115),
+    0 0 3px rgb(99, 212, 129);
+    letter-spacing: 1px;
 }
 
 .about-tab-container {
@@ -113,10 +119,14 @@
     font-weight: 400;
 }
 
-.timeline-item .container {
+.timeline-item .timeline-container {
     border: 2px solid #16cc86;
     padding: 10px 0 0 20px;
     border-radius: 20px;
+}
+
+.accordion-container{
+    width: 60vw;
 }
 
 .accordion-button {

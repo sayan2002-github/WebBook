@@ -5,7 +5,11 @@ export default function () {
     const [result, setResult] = useState("");
 
     const handleClick = (e) => {
-        setResult(result.concat(e.target.innerHTML));
+        if(e.target.innerHTML === 'X'){
+            setResult(result.concat('*'));
+        }else{
+            setResult(result.concat(e.target.innerHTML));
+        }
     }
 
     const clear = () =>{

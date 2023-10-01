@@ -22,9 +22,10 @@ router.post('/createuser', [
 
     try {
         // is there any duplicate email present
+        let success = false;
         let user = await Users.findOne({email : req.body.email});
         if(user){
-            return res.status(400).json({error : "This email already exists"})
+            return res.status(400).json({success, error : "This email already exists"})
         }
 
         // Hashing password
@@ -47,7 +48,8 @@ router.post('/createuser', [
         const jwtoken = jsonwebtoken.sign(data, JWT_SECRET);
 
         // Send a response to the user with jwtoken
-        res.json({token : jwtoken});
+        success = true
+        res.json({success, token : jwtoken});
     } catch (error) {
         console.log(error);
         res.status(500).send(error);
@@ -68,15 +70,17 @@ router.post('/login', [
     const {email, password} = req.body;
     try {
         // Checking the user exists or not
+        let success = false;
+        let userName = 'Profile Name'
         let user = await Users.findOne({email});
         if(!user){
-            return res.status(400).json({error : "Invalid credentials"})
+            return res.status(400).json({userName, success, error : "Invalid credentials"})
         }
 
         // Password checking
         const comparePassword = await bcryptjs.compare(password, user.password);
         if(!comparePassword){
-            return res.status(400).json({error : "Invalid credentials"})
+            return res.status(400).json({userName, success, error : "Invalid credentials"})
         }
 
         // Creating a json web token
@@ -89,7 +93,9 @@ router.post('/login', [
         const jwtoken = jsonwebtoken.sign(data, JWT_SECRET);
 
         // Send a response to the user with jwtoken
-        res.json({token : jwtoken});
+        userName = user.name;
+        success = true;
+        res.json({userName, success, token : jwtoken});
     } catch (error) {
         console.log(error);
         res.status(500).send(error);

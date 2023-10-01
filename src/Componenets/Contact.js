@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './css/Contact.css'
 import photoImg from './images/photo.jpg'
 import photImg1 from './images/photo-1.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faInstagram, faLinkedinIn, faGithub, faFacebookF } from '@fortawesome/free-brands-svg-icons';
-import { faLeaf, faCircleXmark } from '@fortawesome/free-solid-svg-icons';
+import { faLeaf } from '@fortawesome/free-solid-svg-icons';
 
 export default function Contact({ setProgress }) {
 
@@ -13,16 +13,10 @@ export default function Contact({ setProgress }) {
     setProgress(100);
   }, [setProgress])
 
-  function openContactInfo() {
-    if(document.getElementById('contact-form-submit') != null){
-      document.getElementById('contact-form-submit').style.display = 'block';
-    }
-  }
+  const ref = useRef(null);
 
-  function closeContactInfo() {
-    if(document.getElementById('contact-form-submit') != null){
-      document.getElementById('contact-form-submit').style.display = 'none';
-    }
+  const submitFeedback = () => {
+    ref.current.click();
   }
 
   return (
@@ -30,9 +24,46 @@ export default function Contact({ setProgress }) {
       <div className='about-container'>
         <header className='d-flex justify-content-center align-item-center'>
           <div className='about-head-text'>
-            <h2 className='text-center'>Want to know more?</h2>
-            <h2 className='text-center'>Reach out to us!!</h2>
-            <button className='contact-btns btn btn-success' onClick={openContactInfo}>Contact Us</button>
+            <h2 className='about-head-text-headers text-center'>Want to know more?</h2>
+            <h2 className='about-head-text-headers text-center'>Reach out to us!!</h2>
+            <button type="button" className="contact-btns btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              Contact Us
+            </button>
+
+            <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div className="modal-dialog modal-dialog-centered">
+                <div className="modal-content">
+                  <div className="modal-header contact-modal-header">
+                    <h2 className="modal-title fs-5" id="staticBackdropLabel">Contact Us</h2>
+                    <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div className="modal-body contact-modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="exampleInputText1" class="form-label">Enter your name</label>
+                        <input type="text" class="form-control" id="exampleInputText1" placeholder='Enter your full name' />
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder='e.g. example@mail.com' />
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputText1" class="form-label">Subject</label>
+                        <input type="text" class="form-control" id="exampleInputText1" placeholder='Enter the subject of the message' />
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputText1" class="form-label">Description</label>
+                        <textarea className="form-control" name='edescription' id="TextInput3" placeholder='Please! describe your message'></textarea>
+                      </div>
+                    </form>
+                  </div>
+                  <div className="modal-footer contact-modal-footer">
+                    <button type="button" ref={ref} className="submit-btns btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    <button type="button" className="submit-btns btn btn-success" onClick={submitFeedback}>Send Message</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div className='about-head-img '>
             <div className='ab-circle'></div>
@@ -58,30 +89,6 @@ export default function Contact({ setProgress }) {
             </div>
           </div>
         </footer>
-      </div>
-      
-      <div className='container contact-info' id='contact-form-submit'>
-        <button className='btn contact-info-cross' onClick={closeContactInfo}><FontAwesomeIcon icon={faCircleXmark} /></button>
-        <h2>Contact Us</h2>
-        <form action="mailto:sayanparui076@gmail.com" method="post" encType="text/plain">
-          <div className="row">
-            <div className="input-group">
-              <input type="text" placeholder="Name" className="input-control" required />
-            </div>
-            <div className="input-group">
-              <input type="text" placeholder="Mail Id" className="input-control" required />
-            </div>
-            <div className="input-group">
-              <input type="text" placeholder="Subject" className="input-control" required />
-            </div>
-            <div className="input-group">
-              <textarea placeholder="Message" tyepe="text" className="input-control"></textarea>
-            </div>
-            <div className="submit-btn">
-              <button type="button" className="contact-btns btn btn-success">Send Message</button>
-            </div>
-          </div>
-        </form>
       </div>
     </>
   )

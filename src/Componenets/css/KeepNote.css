@@ -1,5 +1,5 @@
 .note-body{
-    margin: 0;
+    margin: 20px 0 0 0;
     padding: 0;
     color: white;
 }
@@ -12,6 +12,18 @@
     border-radius: 0 20px 0 5px;
 }
 
+.modal-content{
+    background-color: transparent;
+}
+
 .modal-body, .modal-header, .modal-footer{
-    background-color: black;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.69), rgb(145, 145, 145));
+}
+
+.card-body .upbtn:hover{
+    color: rgb(26, 227, 26);
+}
+
+.card-body .delbtn:hover{
+    color: red;
 }

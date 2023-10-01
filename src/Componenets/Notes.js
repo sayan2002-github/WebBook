@@ -2,17 +2,18 @@ import React, { useContext, useEffect, useRef, useState } from 'react'
 import noteContext from '../Context/Notes/NoteContext';
 import NoteItems from './NoteItems';
 
-export default function Notes() {
+export default function Notes(props) {
+    
+    useEffect(() => {
+        fetchAllNotes();
+        // eslint-disable-next-line
+    }, []);
+    
     const context = useContext(noteContext);
     const { notes, fetchAllNotes, editNote } = context;
     const [note, setNote] = useState({id: "", etitle:"", etags:"", edescription:""});
     const ref = useRef(null);
     const refClose = useRef(null);
-
-    useEffect(() => {
-        fetchAllNotes();
-        // eslint-disable-next-line
-    }, []);
 
     const updateNote = (currentNote) => {
         ref.current.click();
@@ -22,6 +23,7 @@ export default function Notes() {
     const handleClickUpdate = ()=>{
         editNote(note.id, note.etitle, note.edescription, note.etags)
         refClose.current.click();
+        props.showAlert('Note Updated Successfully', 'success')
     }
 
     const onChange = (e)=>{
@@ -45,7 +47,7 @@ export default function Notes() {
                             <form>
                                 <div className="mb-3">
                                     <label htmlFor="TextInput1" className="form-label">Title</label>
-                                    <input type="text" className="form-control" id="TextInput1" name='etitle' value={note.etitle} placeholder='Title should be atleast 3 characters long' onChange={onChange} />
+                                    <input type="text" className="form-control" id="TextInput1" name='etitle' value={note.etitle} placeholder='Title should be atleast 3 characters long' onChange={onChange} minLength={5} required />
                                 </div>
                                 <div className="mb-3">
                                     <label htmlFor="TextInput2" className="form-label">Tag</label>
@@ -53,20 +55,21 @@ export default function Notes() {
                                 </div>
                                 <div className="mb-3">
                                     <label htmlFor="TextInput3" className="form-label">Description</label>
-                                    <textarea className="form-control" name='edescription' value={note.edescription} id="TextInput3" placeholder='Description should be atleast 5 characters long' onChange={onChange}></textarea>
+                                    <textarea className="form-control" name='edescription' value={note.edescription} id="TextInput3" placeholder='Description should be atleast 5 characters long' onChange={onChange} minLength={5} required></textarea>
                                 </div>
                             </form>
                         </div>
                         <div className="modal-footer">
-                            <button type="button" ref={refClose} className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" className="btn btn-primary" onClick={handleClickUpdate}>Update</button>
+                            <button type="button" ref={refClose} className="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            <button type="button" className="btn btn-success" onClick={handleClickUpdate}>Update</button>
                         </div>
                     </div>
                 </div>
             </div>
             <h2 className='text-center border-bottom border-5 p-2'>Your Notes</h2>
+            <div className='container'>{notes.length === 0 && 'No notes to display'}</div>
             {notes.map((note) => {
-                return <NoteItems key={note._id} updateNote={updateNote} note={note} />
+                return <NoteItems key={note._id} updateNote={updateNote} note={note} showAlert={props.showAlert}/>
             })}
         </div>
     )
