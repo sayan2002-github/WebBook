@@ -1,5 +1,7 @@
+require('dotenv').config()
 const mongoose = require('mongoose');
-const mongooseUri = "mongodb+srv://FirstMongo:712415@firstmongo.pgyxzry.mongodb.net/";
+
+const mongooseUri = process.env.DATABASE;
 mongoose.set('strictQuery', false);
 
 const connectToMongo = ()=>{
