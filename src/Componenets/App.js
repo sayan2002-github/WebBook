@@ -14,6 +14,8 @@ import NoteState from '../Context/Notes/NoteState';
 import Login from './Login';
 import Signup from './Signup';
 import Alert from './Alert';
+import FrogetPassword from './ForgetPassword';
+import ResetPassword from './ResetPassword';
 
 function App() {
   const [progress, setProgress] = useState(0);
@@ -45,6 +47,8 @@ function App() {
         <Routes>
           <Route excat path="/" element={<Login showAlert={showAlert} />} />
           <Route excat path="/signup" element={<Signup showAlert={showAlert} />} />
+          <Route excat path="/forgetpass" element={<FrogetPassword showAlert={showAlert}/>} />
+          <Route excat path="/resetpass/:id/:token" element={<ResetPassword showAlert={showAlert}/>} />
           <Route excat path="/homepage" element={<HomePage setProgress={setProgress} />} />
           <Route excat path="/home" element={<Home setProgress={setProgress} />} />
           <Route excat path="/about" element={<About setProgress={setProgress} />} />

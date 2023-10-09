@@ -90,7 +90,6 @@ export default function Navbar() {
                     <img src={logo} alt="Logo" width="30" height="28" className="d-inline-block align-text-top mx-1" />
                     WebBook
                 </Link>
-
                 
                 {localStorage.getItem('token') && <div>
                     <OverlayTrigger trigger="click" rootClose placement="bottom" overlay={openSettings}>

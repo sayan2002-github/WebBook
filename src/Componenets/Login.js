@@ -85,7 +85,7 @@ const Login = (props) => {
                         </div>
                     </div>
                     <div className="mb-3 d-flex justify-content-between">
-                        <Link to='#'>Forget password?</Link>
+                        <Link to='/forgetpass'>Forget password?</Link>
                         <Link to='/signup'>New user? Register Here !!</Link>
                     </div>
                     <button type="submit" className="btn btn-success px-3 auth-btn">
