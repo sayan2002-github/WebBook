@@ -272,3 +272,23 @@
     position: absolute;
     right: 20px;
 }
+
+
+
+.export-btn{
+    position: absolute;
+    bottom: 7%;
+    width: 3.5vw;
+    background-color: green;
+    border-top-right-radius: 40%;
+    border-bottom-right-radius: 40%;
+    border-top: 4px solid rgb(72, 202, 72);
+    border-bottom: 4px solid rgb(72, 202, 72);
+    border-right: 4px solid rgb(72, 202, 72);
+}
+
+.export-btn .btn{
+    border-radius: 42% !important;
+    padding: 10px 12px !important;
+    background-color: rgb(0, 76, 0);
+}

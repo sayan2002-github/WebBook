@@ -178,3 +178,11 @@
 .cal-row .cal-swiitch-sp:hover {
     background-color: purple !important;
 }
+
+.orange-switch{
+    background-color: orange !important;
+}
+
+.orange-switch:hover{
+    background-color: orangered !important;
+}

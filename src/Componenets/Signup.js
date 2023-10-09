@@ -1,12 +1,23 @@
-import React, { useState } from 'react'
-import './css/Auth.css'
+import React, { useState } from 'react';
+import './css/Auth.css';
 import { Link, useNavigate } from 'react-router-dom';
-import eyeOpen from './images/eye-open.png'
-import eyeClose from './images/eye-close.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye, faEyeSlash, faLock, faEnvelope, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
 
 const Signup = (props) => {
-    let navigate = useNavigate();
-    const [credential, setCredential] = useState({ name: "", email: "", password: "" });
+    const navigate = useNavigate();
+    const [credential, setCredential] = useState({ name: "", email: "", password: "", cpassword: "" });
+    const [showPassword, setShowPassword] = useState(false);
+    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
+    const togglePasswordVisibility = (field) => {
+        if (field === 'password') {
+            setShowPassword(!showPassword);
+        } else if (field === 'cpassword') {
+            setShowConfirmPassword(!showConfirmPassword);
+        }
+    }
 
     const onSubmit = async (e) => {
         try {
@@ -38,70 +49,98 @@ const Signup = (props) => {
     }
 
     const onChange = (e) => {
-        setCredential({ ...credential, [e.target.name]: e.target.value })
+        setCredential({ ...credential, [e.target.name]: e.target.value });
     }
 
-    if (document.getElementById('eyeIcon') !== null) {
-        let eyeIcon = document.getElementById('eyeIcon')
-        let eyeIconC = document.getElementById('eyeIconC')
+    const checkConfirmation = (e) => {
+        let exampleInputPassword1 = document.getElementById('exampleInputPassword1');
 
-        eyeIcon.onclick = function () {
-            let exampleInputPassword1 = document.getElementById('exampleInputPassword1');
-
-            if (exampleInputPassword1.type === 'password') {
-                exampleInputPassword1.type = 'text'
-                eyeIcon.src = eyeOpen
+        if (e.value.length > 0) {
+            if (e.value !== exampleInputPassword1.value) {
+                document.getElementById('confirmText').innerText = "** Password doesn't match!!"
             } else {
-                exampleInputPassword1.type = 'password'
-                eyeIcon.src = eyeClose
+                document.getElementById('confirmText').innerText = ""
             }
-        }
-
-        eyeIconC.onclick = function () {
-            let exampleInputPassword2 = document.getElementById('exampleInputPassword2');
-
-            if (exampleInputPassword2.type === 'password') {
-                exampleInputPassword2.type = 'text'
-                eyeIconC.src = eyeOpen
-            } else {
-                exampleInputPassword2.type = 'password'
-                eyeIconC.src = eyeClose
-            }
+        } else {
+            document.getElementById('confirmText').innerText = "** Please, enter confirm password!!"
         }
     }
 
     return (
-        <div>
-            <form className='container auth-container' onSubmit={onSubmit}>
-                <div className="mb-3">
-                    <label htmlFor="exampleInputText" className="form-label">Name</label>
-                    <input type="text" name='name' className="form-control" id="exampleInputText" onChange={onChange} required minLength={3} />
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-                    <input type="email" name='email' className="form-control" id="exampleInputEmail1" onChange={onChange} required />
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-                    <div className='inputBox d-flex align-item-center'>
-                        <input type="password" name='password' className="form-control" id="exampleInputPassword1" onChange={onChange} required minLength={5} />
-                        <img src={eyeClose} alt='image1' id='eyeIcon' />
+        <>
+            <div className='container d-flex flex-column align-item-center auth-container signin-container'>
+                <form className='container' onSubmit={onSubmit}>
+                    <h2 className='text-center mb-4'> Register Here</h2>
+                    <div className="mb-3">
+                        <div className='inputBox d-flex align-item-center'>
+                            <FontAwesomeIcon icon={faUser} className='eyeIconClass' />
+                            <input type="text" name='name' className="form-control" id="exampleInputText" placeholder='Enter Username' onChange={onChange} required minLength={3} />
+                        </div>
                     </div>
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="exampleInputPassword2" className="form-label">Confirm Password</label>
-                    <div className='inputBox d-flex align-item-center'>
-                        <input type="password" name='cpassword' className="form-control" id="exampleInputPassword2" onChange={onChange} required minLength={5} />
-                        <img src={eyeClose} alt='image1' id='eyeIconC' />
+                    <div className="mb-3">
+                        <div className='inputBox d-flex align-item-center'>
+                            <FontAwesomeIcon icon={faEnvelope} className='eyeIconClass' />
+                            <input type="email" name='email' className="form-control" id="exampleInputEmail1" placeholder='Enter Email ID' onChange={onChange} required />
+                        </div>
                     </div>
+                    <div className="mb-3">
+                        <div className='inputBox d-flex align-item-center'>
+                            <FontAwesomeIcon icon={faLock} className='eyeIconClass' />
+                            <input
+                                type={showPassword ? 'text' : 'password'}
+                                name='password'
+                                className="form-control"
+                                id="exampleInputPassword1"
+                                placeholder='Enter Password'
+                                onChange={onChange}
+                                required
+                                minLength={5}
+                            />
+                            <FontAwesomeIcon
+                                icon={showPassword ? faEyeSlash : faEye}
+                                className='eyeIconClass'
+                                onClick={() => togglePasswordVisibility('password')}
+                            />
+                        </div>
+                    </div>
+                    <div className="mb-3">
+                        <div className='inputBox d-flex align-item-center'>
+                            <FontAwesomeIcon icon={faLock} className='eyeIconClass' />
+                            <input
+                                type={showConfirmPassword ? 'text' : 'password'}
+                                name='cpassword'
+                                className="form-control"
+                                id="exampleInputPassword2"
+                                placeholder='Confirm Password'
+                                onChange={onChange}
+                                onKeyUp={(e) => checkConfirmation(e.target)}
+                                required
+                                minLength={5}
+                            />
+                            <FontAwesomeIcon
+                                icon={showConfirmPassword ? faEyeSlash : faEye}
+                                className='eyeIconClass'
+                                onClick={() => togglePasswordVisibility('cpassword')}
+                            />
+                        </div>
+                        <span id='confirmText'> </span>
+                    </div>
+                    <div className="mb-3">
+                        <Link to='/'>Already have an account ?? Login Here !!</Link>
+                    </div>
+                    <button type="submit" className="btn btn-success px-3 auth-btn">Signup</button>
+                </form>
+
+                <hr />
+
+                <div className='container firebaseContainer d-flex justify-content-center'>
+                    
+                    <button className='btn btn-primary mx-4 px-2'><FontAwesomeIcon icon={faGoogle} className='mx-1'/> Continue With Google</button>
+                    <button className='btn btn-dark mx-4 px-2'><FontAwesomeIcon icon={faGithub} className='mx-1'/> Continue With GitHub</button>
                 </div>
-                <div className="mb-3">
-                    <Link to='/'>Already have an account ?? Login Here!!</Link>
-                </div>
-                <button type="submit" className="btn btn-primary px-3">Signup</button>
-            </form>
-        </div>
+            </div>
+        </>
     )
 }
 
-export default Signup
+export default Signup;

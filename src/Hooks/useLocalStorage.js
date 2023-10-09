@@ -13,7 +13,7 @@ export default function useLocalStorage(key, initialValue) {
             return initialValue()
         }else{
             console.log('not function')
-            return initialValue
+            return initialValue()
         }
     })
 

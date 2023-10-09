@@ -84,7 +84,7 @@ export default function () {
     }
     return (
         <>
-            <input type="text" className="cal-screen" defaultValue={display} />
+            <input disabled type="text" className="cal-screen" defaultValue={display} />
             <div className="cal-switches">
                 <div className="cal-row">
                     <button className="cal-switch cal-swiitch-sp" id="cal-switch1" onClick={handleClick}>sin</button>
@@ -95,45 +95,45 @@ export default function () {
                 </div>
                 <div className="cal-row">
                     <button className="cal-switch cal-swiitch-sp" id="cal-switch1" onClick={handleClick}>log</button>
-                    <button className="cal-switch" id="cal-switch2" onClick={handleClick}>ln</button>
-                    <button className="cal-switch" id="cal-switch3" onClick={handleClick}>(</button>
-                    <button className="cal-switch" id="cal-switch4" onClick={handleClick}>)</button>
-                    <button className="cal-switch" id="cal-switch4" onClick={handleClick}>inv</button>
+                    <button className="cal-switch orange-switch" id="cal-switch2" onClick={handleClick}>ln</button>
+                    <button className="cal-switch orange-switch" id="cal-switch3" onClick={handleClick}>(</button>
+                    <button className="cal-switch orange-switch" id="cal-switch4" onClick={handleClick}>)</button>
+                    <button className="cal-switch orange-switch" id="cal-switch4" onClick={handleClick}>inv</button>
                 </div>
                 <div className="cal-row">
                     <button className="cal-switch cal-swiitch-sp" id="cal-switch1" onClick={handleClick}>!</button>
-                    <button className="cal-switch" id="cal-switch2" onClick={clear}>C</button>
-                    <button className="cal-switch" id="cal-switch3" onClick={handleClick}>%</button>
-                    <button className="cal-switch" id="cal-switch4" onClick={backSpace}>Del</button>
-                    <button className="cal-switch" id="cal-switch4" onClick={handleClick}>/</button>
+                    <button className="cal-switch orange-switch" id="cal-switch2" onClick={clear}>C</button>
+                    <button className="cal-switch orange-switch" id="cal-switch3" onClick={handleClick}>%</button>
+                    <button className="cal-switch orange-switch" id="cal-switch4" onClick={backSpace}>Del</button>
+                    <button className="cal-switch orange-switch" id="cal-switch4" onClick={handleClick}>/</button>
                 </div>
                 <div className="cal-row">
                     <button className="cal-switch cal-swiitch-sp" id="cal-switch1" onClick={handleClick}>^</button>
                     <button className="cal-switch" id="cal-switch1" onClick={handleClick}>7</button>
                     <button className="cal-switch" id="cal-switch2" onClick={handleClick}>8</button>
                     <button className="cal-switch" id="cal-switch3" onClick={handleClick}>9</button>
-                    <button className="cal-switch" id="cal-switch4" onClick={handleClick}>X</button>
+                    <button className="cal-switch orange-switch" id="cal-switch4" onClick={handleClick}>X</button>
                 </div>
                 <div className="cal-row">
                     <button className="cal-switch cal-swiitch-sp" id="cal-switch1" name="z" onClick={handleClick}>&radic;</button>
                     <button className="cal-switch" id="cal-switch1" onClick={handleClick}>4</button>
                     <button className="cal-switch" id="cal-switch2" onClick={handleClick}>5</button>
                     <button className="cal-switch" id="cal-switch3" onClick={handleClick}>6</button>
-                    <button className="cal-switch" id="cal-switch4" onClick={handleClick}>+</button>
+                    <button className="cal-switch orange-switch" id="cal-switch4" onClick={handleClick}>+</button>
                 </div>
                 <div className="cal-row">
                     <button className="cal-switch cal-swiitch-sp" id="cal-switch1" name="p" onClick={handleClick}>&#960;</button>
                     <button className="cal-switch" id="cal-switch1" onClick={handleClick}>1</button>
                     <button className="cal-switch" id="cal-switch2" onClick={handleClick}>2</button>
                     <button className="cal-switch" id="cal-switch3" onClick={handleClick}>3</button>
-                    <button className="cal-switch" id="cal-switch4" onClick={handleClick}>-</button>
+                    <button className="cal-switch orange-switch" id="cal-switch4" onClick={handleClick}>-</button>
                 </div>
                 <div className="cal-row">
                     <button className="cal-switch cal-swiitch-sp" id="cal-switch1" onClick={handleClick}>e</button>
                     <button className="cal-switch" id="cal-switch1" onClick={handleClick}>00</button>
                     <button className="cal-switch" id="cal-switch2" onClick={handleClick}>0</button>
                     <button className="cal-switch" id="cal-switch3" onClick={handleClick}>.</button>
-                    <button className="cal-switch" id="cal-switch4" onClick={calcualte}>=</button>
+                    <button className="cal-switch orange-switch" id="cal-switch4" onClick={calcualte}>=</button>
                 </div>
             </div>
         </>

@@ -1,21 +1,67 @@
-form{
+.auth-container {
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 5px 25px rgba(255, 255, 255, 0.301);
+    z-index: 1000;
+    transition: 0.5s;
+    background-color: transparent;
     color: white;
 }
 
-.inputBox{
+.login-container {
+    margin-top: 8%;
+    background: url(../images/login-bg.png);
+    background-size: cover;
+    /* or "contain" depending on what you want */
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* background */
+}
+
+.signin-container {
+    margin-top: 6%;
+    background: url(../images/signin-bg.png);
+    background-size: cover;
+    /* or "contain" depending on what you want */
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.inputBox {
     background: #fff;
     border-radius: 5px;
 }
 
-.inputBox input{
-    width: 100%;
-    border: 0;
+.inputBox {
+    background-color: #72727280 !important;
+    border: 1px solid white;
     outline: 0;
+    padding: 0;
 }
 
-.inputBox img{
-    width: 35px;
-    padding: 8px 0;
+#confirmText{
+    color: #86ffde !important;
+}
+
+.auth-container input{
+    border: 0;
+    background-color: #72727280 !important;
+    border-radius: 0;
+}
+
+.eyeIconClass {
+    width: 30px;
+    padding: 10px 0 0 10px;
     margin-right: 12px;
     cursor: pointer;
+}
+
+.auth-btn{
+    display: block;
+    margin: auto;
+    padding: 10px 26px !important;
+    font-weight: bold;
+    letter-spacing: 1px;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
 }

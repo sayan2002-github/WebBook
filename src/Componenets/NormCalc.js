@@ -31,7 +31,7 @@ export default function () {
 
     return (
         <>
-            <input type="text" className="cal-screen" defaultValue={result} />
+            <input disabled type="text" className="cal-screen" defaultValue={result} />
             <div className="cal-switches">
                 <div className="cal-row">
                     <button className="Ncal-switch cal-equi" id="cal-switch1" onClick={clear}>C</button>

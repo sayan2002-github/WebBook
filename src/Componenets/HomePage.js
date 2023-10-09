@@ -28,29 +28,9 @@ export default function HomePage({ setProgress }) {
 
     const apiKey = "71fb475d6a7b3ac081efc39193200a8a";
     const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
-    const [weatherIcon, setWeatherIcon] = useState(null);
+    const [weatherIcon, setWeatherIcon] = useState(rainLogo);
 
-    useEffect(() => {
-        const searchBox = document.querySelector(".searchN input");
-        const searchBtn = document.querySelector(".searchN button");
-
-        setWeatherIcon(document.querySelector(".weather-icon")); // Save the weatherIcon element reference
-
-        searchBtn.addEventListener('click', () => {
-            const searchBoxVal = searchBox.value;
-            checkWeather(searchBoxVal, weatherIcon);
-        });
-
-        // Clean up the event listener when the component unmounts
-        return () => {
-            searchBtn.removeEventListener('click', () => {
-                const searchBoxVal = searchBox.value;
-                checkWeather(searchBoxVal, weatherIcon);
-            });
-        };
-    }, [weatherIcon]);
-
-    async function checkWeather(cityName, weatherIcon) {
+    async function checkWeather(cityName) {
         try {
             const response = await fetch(apiUrl + cityName + `&appid=${apiKey}`);
             var data = await response.json();
@@ -79,16 +59,33 @@ export default function HomePage({ setProgress }) {
 
     }
 
-    window.onload = function () {
+    useEffect(() => {
         const searchBox = document.querySelector(".searchN input");
         const searchBtn = document.querySelector(".searchN button");
-        const weatherIcon = document.querySelector(".weather-icon");
-
-        checkWeather(searchBox.value);
 
         searchBtn.addEventListener('click', () => {
             const searchBoxVal = searchBox.value;
-            checkWeather(searchBoxVal, weatherIcon);
+            checkWeather(searchBoxVal);
+        });
+
+        // Clean up the event listener when the component unmounts
+        return () => {
+            searchBtn.removeEventListener('click', () => {
+                const searchBoxVal = searchBox.value;
+                checkWeather(searchBoxVal);
+            });
+        };
+    }, []);
+
+    window.onload = function () {
+        const searchBox = document.querySelector(".searchN input");
+        const searchBtn = document.querySelector(".searchN button");
+
+        // checkWeather(searchBox.value);
+
+        searchBtn.addEventListener('click', () => {
+            const searchBoxVal = searchBox.value;
+            checkWeather(searchBoxVal);
         })
     }
 
@@ -103,7 +100,7 @@ export default function HomePage({ setProgress }) {
             <div className='home-container d-flex justify-content-between align-item-center my-10'>
                 <div className="card cardN card1">
                     <div className='forecast'>
-                        <img src={rainLogo} alt="search" className='weather-icon' />
+                        <img src={weatherIcon} alt="search" className='weather-icon' />
                         <h1 className='temp'>22°C</h1>
                         <h2 className='city'>Kolkata</h2>
                     </div>
@@ -145,11 +142,11 @@ export default function HomePage({ setProgress }) {
             <div className='card-containers mt-20'>
                 <div className="row">
                     <div className="col-sm-4 whole-cards">
-                        <p className='card-headers'><FontAwesomeIcon icon={faPenClip} /> HTML Editor</p>
+                        <p className='card-headers'><FontAwesomeIcon icon={faPenClip} />&nbsp; Online Code Editor</p>
                         <div className="card cardE card3">
                             <img src={editorLogo} className="card-img-top" alt="..."></img>
                             <div className="card-body card-bodyE">
-                                <h3 className="card-title card-titleE">HTML Editor</h3>
+                                <h3 className="card-title card-titleE">Online Code Editor</h3>
                                 <p className="card-text card-textE">
                                     This is an online platform that provide an embedded HTML, CSS and JavaScript Editor for frontend designers and web developers. Built your website and showcase it.</p>
                                 <Link to="/home" className="btn btn-light">Open App</Link>
@@ -157,7 +154,7 @@ export default function HomePage({ setProgress }) {
                         </div>
                     </div>
                     <div className="col-sm-4 whole-cards">
-                        <p className='card-headers'><FontAwesomeIcon icon={faCalculator} /> Calculator App</p>
+                        <p className='card-headers'><FontAwesomeIcon icon={faCalculator} />&nbsp; Calculator App</p>
                         <div className="card cardE card4">
                             <img src={calLogo} className="card-img-top" alt="..."></img>
                             <div className="card-body card-bodyE">
@@ -168,7 +165,7 @@ export default function HomePage({ setProgress }) {
                         </div>
                     </div>
                     <div className="col-sm-4 whole-cards">
-                        <p className='card-headers'><FontAwesomeIcon icon={faLightbulb} /> Keep Note's</p>
+                        <p className='card-headers'><FontAwesomeIcon icon={faLightbulb} />&nbsp; Keep Note's</p>
                         <div className="card cardE card5">
                             <img src={noteLogo} className="card-img-top" alt="..."></img>
                             <div className="card-body card-bodyE">

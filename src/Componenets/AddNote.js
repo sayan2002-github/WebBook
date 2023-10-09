@@ -22,10 +22,10 @@ const AddNote = (props) => {
 
     return (
         <div className='container'>
-            <form>
+            <form onSubmit={handleClickAdd}>
                 <div className="mb-3">
                     <label htmlFor="TextInput1" className="form-label">Enter Title</label>
-                    <input type="text" className="form-control" id="TextInput1" name='title' value={note.title} placeholder='Title should be atleast 3 characters long'  onChange={onChange} minLength={5} required/>
+                    <input type="text" className="form-control" id="TextInput1" name='title' value={note.title} placeholder='Title should be atleast 3 characters long'  onChange={onChange} minLength={3} required/>
                 </div>
                 <div className="mb-3">
                     <label htmlFor="TextInput2" className="form-label">Enter Tag</label>
@@ -35,7 +35,7 @@ const AddNote = (props) => {
                     <label htmlFor="TextInput3" className="form-label">Enter Description</label>
                     <textarea className="form-control" name='description' value={note.description} id="TextInput3" placeholder='Description should be atleast 5 characters long' onChange={onChange} minLength={5} required></textarea>
                 </div>
-                <button type="submit" className="btn btn-success px-3" onClick={handleClickAdd}><FontAwesomeIcon icon={faPlus} /> Add </button>
+                <button type="submit" className="btn btn-success px-3"><FontAwesomeIcon icon={faPlus} /> Add </button>
             </form>
         </div>
     )
