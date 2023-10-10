@@ -1,25 +1,37 @@
-# WebBook - An online Web Application for code editing, weather checking and other integrated features
-#####  A React Js web application with multiple integrated feature/applications 🔥🔥🔥🔥
+# WebBook - An online Web Page with multiple integrated Sytems | like - Online Code Editor, Keep Note's, Calcualtor etc.
+#####  This is a MERN stack web application with multiple integrated feature/applications. 🔥🔥🔥🔥
 
 ## Introduction
-It is an individual project created using React Js. There are three different editors for HTML, CSS and JavaScript. It also Comes up with an integrated calculator application to calculate accounts, that dynamically can also be changed from normal calculator
-to scientific calculator and vice‑versa. In the home page a weather app is present where one can simply search cities to check weather, wind speed etc. And also a beautiful
-clock is present to provide the valuable time that runs all (24x7) hour.
+• This is a group project where I contributed more than 80% both in frontend and backend of this web application. This project is created using
+MERN(Mongodb as database, Express js and Node Js as server side language and React Js as client side) tech stack.
+• It comes up with ‑ A online code editor for frontend development with simple HTML, CSS and JavaScript. The 2nd one is a calculator app that
+you can dynamically change into a scientific calculator. And the last one is a keep note app where you can keep your notes online and secure.
+• In the beautiful home page a weather app is present where one can simply search cities to check weather, wind speed etc. And also a beautiful
+clock is present to provide the valuable time that runs all (24x7) hours.
 
 ## Features
-1. A beautiful home page with an analog clock to provide time and weather application to provide weather of any cities.
-2. It's main attraction is the code editor where you can run your HTML, CSS and JavaScript code to create beautiful websites.
-3. It also comes up with a calulator app that can be changed into scientific calculator also by just one click.
+1. For authetication it has a login and a signup page that you can use to login and to create acoount.
+2. For security purpose it also has forget password option.
+3. The first attraction is a weather checking interface according to the searched city.
+4. The second attraction is an online IDE for front-end development with simple HTMl, CSS and JavaScript.
+5. You can also download those HTMS, CSS and JavaScript file as a .html file in your localstorage.
+6. It also comes up with a calulator app that can be changed into scientific calculator also by just one click.
+7. The final attraction is a kepp note application where you can keep your precious note online and secured.
 
 ## Still working on:
 1. Responsiveness (N.B. - this is not a responsive website yet!!).
-2. Backend design to provide login and signup features.
+2. Working on validation with Google and GitHub using FireBase.
 
 ## Technolgy and tools used
 1. React Js
-2. Bootstrap 5.2
-3. JavaScript
-4. NPM packages (like - code mirror, react-router etc.)
+2. Express Js
+3. Node Js
+4. MongoDB
+5. Bootstrap 5.2
+6. JavaScript
+7. NPM packages (like - code mirror, react-router etc.)
+8. FireBase
 
 ## Deployment
+#### This is just a front-end prototype not the full application
 To view my work please [Click Here](https://shiny-tartufo-922b70.netlify.app/)
