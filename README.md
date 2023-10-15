@@ -31,10 +31,13 @@ clock is present to provide the valuable time that runs all (24x7) hours.
 6. JavaScript
 7. NPM packages (like - code mirror, react-router etc.)
 8. FireBase
+![keep note](https://github.com/sayan2002-github/WebBook/assets/84588159/2ac28af0-a8f1-4b41-8f2e-5d0646042fbe)
 
 ## Know more about WebBook Frontend [https://drive.google.com/file/d/1ItCkNodgWE55RxxXp1qB4Pdnwg5MxxpI/view?usp=sharing](https://drive.google.com/file/d/1ItCkNodgWE55RxxXp1qB4Pdnwg5MxxpI/view?usp=sharing)
 
 ## Know more about WebBook Backend [https://drive.google.com/file/d/1quNojUuV5BxM7io-3q_bfSVAlAiOV467/view?usp=sharing](https://drive.google.com/file/d/1quNojUuV5BxM7io-3q_bfSVAlAiOV467/view?usp=sharing)
+
+
 
 ## Deployment
 #### This is just a front-end prototype not the full application
