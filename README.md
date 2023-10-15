@@ -32,6 +32,10 @@ clock is present to provide the valuable time that runs all (24x7) hours.
 7. NPM packages (like - code mirror, react-router etc.)
 8. FireBase
 
+## Know more about WebBook Frontend [https://drive.google.com/file/d/1ItCkNodgWE55RxxXp1qB4Pdnwg5MxxpI/view?usp=sharing](https://drive.google.com/file/d/1ItCkNodgWE55RxxXp1qB4Pdnwg5MxxpI/view?usp=sharing)
+
+## Know more about WebBook Backend [https://drive.google.com/file/d/1quNojUuV5BxM7io-3q_bfSVAlAiOV467/view?usp=sharing](https://drive.google.com/file/d/1quNojUuV5BxM7io-3q_bfSVAlAiOV467/view?usp=sharing)
+
 ## Deployment
 #### This is just a front-end prototype not the full application
 To view my work please [Click Here](https://shiny-tartufo-922b70.netlify.app/)
