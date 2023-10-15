@@ -18,20 +18,7 @@ clock is present to provide the valuable time that runs all (24x7) hours.
 6. It also comes up with a calulator app that can be changed into scientific calculator also by just one click.
 7. The final attraction is a kepp note application where you can keep your precious note online and secured.
 
-## Still working on:
-1. Responsiveness (N.B. - this is not a responsive website yet!!).
-2. Working on validation with Google and GitHub using FireBase.
-
-## Technolgy and tools used
-1. React Js
-2. Express Js
-3. Node Js
-4. MongoDB
-5. Bootstrap 5.2
-6. JavaScript
-7. NPM packages (like - code mirror, react-router etc.)
-8. FireBase
-
+## Glimpse from the app
 #### WebBook Homepage
 ![homepage](https://github.com/sayan2002-github/WebBook/assets/84588159/5d0be53c-5d2e-43e9-a1b9-50b385c3093c)
 #### Weather App
@@ -47,10 +34,24 @@ clock is present to provide the valuable time that runs all (24x7) hours.
 #### Keep Note's
 ![keep note](https://github.com/sayan2002-github/WebBook/assets/84588159/2ac28af0-a8f1-4b41-8f2e-5d0646042fbe)
 
+## Still working on:
+1. Responsiveness (N.B. - this is not a responsive website yet!!).
+2. Working on validation with Google and GitHub using FireBase.
+
+## Technolgy and tools used
+1. React Js
+2. Express Js
+3. Node Js
+4. MongoDB
+5. Bootstrap 5.2
+6. JavaScript
+7. NPM packages (like - code mirror, react-router etc.)
+8. FireBase
+
+
+## Know more about
 #### Know more about WebBook Frontend [Click here](https://drive.google.com/file/d/1ItCkNodgWE55RxxXp1qB4Pdnwg5MxxpI/view?usp=sharing)
-
 #### Know more about WebBook Backend [Click Here](https://drive.google.com/file/d/1quNojUuV5BxM7io-3q_bfSVAlAiOV467/view?usp=sharing)
-
 
 
 ## Deployment
