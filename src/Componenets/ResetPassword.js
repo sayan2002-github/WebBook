@@ -27,14 +27,15 @@ const ResetPassword = (props) => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ password: password }),
+                body: JSON.stringify({ password }),
             });
+            props.showAlert('Password Changed successfully!!', 'success');
             const json = await response.json();
             console.log(json);
 
             if (json.success) {
                 navigate('/')
-                props.showAlert('Password is Changed successfully!!', 'success');
+                props.showAlert('Password Changed successfully!!', 'success');
             }
         } catch (e) {
             console.log(e);

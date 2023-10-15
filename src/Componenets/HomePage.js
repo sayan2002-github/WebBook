@@ -34,7 +34,7 @@ export default function HomePage({ setProgress }) {
         try {
             const response = await fetch(apiUrl + cityName + `&appid=${apiKey}`);
             var data = await response.json();
-            document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
+            document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°c";
             document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
             document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
 
@@ -101,7 +101,7 @@ export default function HomePage({ setProgress }) {
                 <div className="card cardN card1">
                     <div className='forecast'>
                         <img src={weatherIcon} alt="search" className='weather-icon' />
-                        <h1 className='temp'>22°C</h1>
+                        <h1 className='temp'>22°c</h1>
                         <h2 className='city'>Kolkata</h2>
                     </div>
 

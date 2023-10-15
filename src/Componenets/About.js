@@ -58,7 +58,14 @@ export default function About({ setProgress }) {
             <div className="timeline-item">
               <div className='container timeline-container'>
                 <p className="date">Version 3.1.0 (Major)</p>
-                <p>In major update version 2.0.0, I added the backend with the keep notes' application where you can easily keep your daily doing or trackss or notes !!
+                <p>In major update version 3.1.0, I added the backend with the keep notes' application where you can easily keep your daily doing or trackss or notes !!
+                </p>
+              </div>
+            </div>
+            <div className="timeline-item">
+              <div className='container timeline-container'>
+                <p className="date">Version 3.1.1 (Fixed)</p>
+                <p>In update version 3.1.1, fixed some minor bugs !!
                 </p>
               </div>
             </div>

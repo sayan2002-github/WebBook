@@ -1,4 +1,5 @@
 const express = require('express')
+require('dotenv').config()
 const router = express.Router()
 const Users = require('../models/Users')
 const { body, validationResult } = require('express-validator');
@@ -7,7 +8,7 @@ const jsonwebtoken = require('jsonwebtoken')
 const getuser = require('../middlleware/getuser')
 var nodemailer = require('nodemailer');
 
-const JWT_SECRET = 'shhh';
+const JWT_SECRET = process.env.JWTSECRET;
 
 // localhost:5000/api/auth/createuser --> Post request to create user   ..... No login required
 router.post('/createuser', [
@@ -133,6 +134,8 @@ router.post('/forgetpassword', [
         // Send a response to the user with jwtoken
         success = true;
         res.json({ userName, success, token: jwtoken });
+        const mailid = process.env.MYMAIL;
+        const mailpass = process.env.NODEMAILERPASS
 
         var transporter = nodemailer.createTransport({
             service: 'gmail',
@@ -140,13 +143,13 @@ router.post('/forgetpassword', [
             port: 465,
             secure: true,
             auth: {
-                user: 'webbook973@gmail.com',
-                pass: 'syww jhhz fkzu guiz'
+                user: mailid,
+                pass: mailpass
             }
         });
 
         var mailOptions = {
-            from: 'webbook973@gmail.com',
+            from: mailid,
             to: email,
             subject: 'Reset Your WebBook Password',
             text: `http://localhost:3000/resetpass/${user.id}/${jwtoken}`
