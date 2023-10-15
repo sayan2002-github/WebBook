@@ -23,8 +23,6 @@ clock is present to provide the valuable time that runs all (24x7) hours.
 ![homepage](https://github.com/sayan2002-github/WebBook/assets/84588159/5d0be53c-5d2e-43e9-a1b9-50b385c3093c)
 #### Weather App
 ![weather-app](https://github.com/sayan2002-github/WebBook/assets/84588159/36938015-bb99-488a-88a8-1a77b80b1634)
-#### Analog Clock
-![clock](https://github.com/sayan2002-github/WebBook/assets/84588159/743be03e-3de0-4d8e-bf0b-1a6fe83609e2)
 #### Online Code Editor
 ![editor](https://github.com/sayan2002-github/WebBook/assets/84588159/539772df-ae60-47b7-a3a8-c62cb8a6949f)
 #### Normal Calculator
